@@ -1,0 +1,14 @@
+[project]
+name = "practica-6-mpi"
+version = "0.1.0"
+description = "Practica de MPI"
+readme = "README.md"
+requires-python = "=3.12"
+dependencies = [
+    matplotlib,
+    customtkinter,
+    pandas,
+    numpy,
+    scikit-learn,
+    mpi4py
+]

@@ -1,0 +1,3 @@
+localhost     slots=1
+slave-ubuntu  slots=1
+slave-mint    slots=1
