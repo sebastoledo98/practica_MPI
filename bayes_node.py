@@ -5,7 +5,6 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 def train_nb(X_train_tfidf, y_train, X_test_tfidf, y_test, params=None):
     if params is None: params = {}
 
-    # Obtenemos alpha (suavizado), por defecto 1.0
     alpha_val = params.get('alpha', 1.0)
     print(f"[Node NB] Entrenando con Alpha={alpha_val}...")
 

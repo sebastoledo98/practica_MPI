@@ -2,11 +2,9 @@ import time
 from sklearn.svm import LinearSVC
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
-# Agregamos el argumento 'params'
 def train_svm(X_train_tfidf, y_train, X_test_tfidf, y_test, params=None):
     if params is None: params = {}
 
-    # Obtenemos el hiperparámetro C (fuerza de regularización), por defecto 1.0
     c_val = params.get('C', 1.0)
     print(f"[Node SVM] Entrenando con C={c_val}...")
 
@@ -20,7 +18,6 @@ def train_svm(X_train_tfidf, y_train, X_test_tfidf, y_test, params=None):
     acc = accuracy_score(y_test, y_pred)
     cm = confusion_matrix(y_test, y_pred).tolist()
 
-    # Devolvemos el reporte completo para sacar precision/recall luego
     report = classification_report(y_test, y_pred, output_dict=True)
 
     return {
